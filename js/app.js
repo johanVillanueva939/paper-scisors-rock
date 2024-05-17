@@ -1,7 +1,8 @@
 let rock= document.getElementById('rock')
 let paper= document.getElementById('paper')
 let scissor= document.getElementById('scissor')
-let resultado
+let playerPoints=0
+let cpuPoints=0
 
 rock.addEventListener('click', rockEvent),
 paper.addEventListener('click', paperEvent),
@@ -27,9 +28,17 @@ function cpuEvent() {
     } else if (
         (resultado == "scissor" && cpu =="paper" || resultado == "paper" && cpu == "rock" || resultado == "rock" && cpu == "scissor")
     ) { 
+        playerPoints +=1;
         console.log('You win!!');
     } else {
+        cpuPoints +=1;
         console.log('Cpu win!!');
+    }
+    if (cpuPoints==3) {
+        console.log('gano la cpu')
+    }else if (playerPoints == 3) {
+        console.log('gano EL JUGA')
+        
     }
 }
 
