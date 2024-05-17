@@ -7,23 +7,29 @@
         <title>Document</title>
     </head>
         <body>
+            <h1>Empates</h1>
+            <p id="drawScore">0</p>
             <main>
-                <div id="tital-imgs">
-                    <div id="player">
-                        <h1>Player</h1>
-                            <p id="playerScore">0</p>
-                                <button id="rock"><img src="assets/rock.png" alt="piedra"></button>
-                                <button id="paper"><img src="assets/paper.png" alt="papel"></button>
-                                <button id="scissor"><img src="assets/scissors.png" alt="tijeras"></button>
-                    </div>
-                        <div class="cpu">
-                            <h1>CPU</h1>
-                                <p id="cpuScore">0</p>
-                                    <label id="lblRock"><img src="assets/rock.png" alt="piedra"></label>
-                                    <label id="lblPaper"><img src="assets/paper.png" alt="papel"></label>
-                                    <label id="lblScissors"><img src="assets/scissors.png" alt="tijeras"></label>
+                <section class="all">
+                    <section class="total-imgs">
+                        <div class="players">
+                            <div id="player">
+                                <h1>Player</h1>
+                                    <p id="playerScore">0</p>
+                                        <button id="rock"><img src="assets/rock.png" alt="piedra" id="img"></button>
+                                        <button id="paper"><img src="assets/paper.png" alt="papel" id="img"></button>
+                                        <button id="scissor"><img src="assets/scissors.png" alt="tijeras" id="img"></button>
+                            </div>
+                                <div class="cpu">
+                                    <h1>CPU</h1>
+                                        <p id="cpuScore">0</p>
+                                            <label id="lblRock"><img src="assets/rock.png" alt="piedra" id="img"></label>
+                                            <label id="lblPaper"><img src="assets/paper.png" alt="papel" id="img"></label>
+                                            <label id="lblScissors"><img src="assets/scissors.png" alt="tijeras" id="img"></label>
+                                </div>
                         </div>
-                </div>
+                    </section>
+                </section>
             </main>
         </body>
     <script src="js/app.js"></script>

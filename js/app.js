@@ -3,6 +3,7 @@ let paper= document.getElementById('paper')
 let scissor= document.getElementById('scissor')
 let playerPoints=0
 let cpuPoints=0
+let drawPoints=0
 
 rock.addEventListener('click', rockEvent),
 paper.addEventListener('click', paperEvent),
@@ -24,22 +25,30 @@ function cpuEvent() {
     const options = ["rock", "paper", "scissor"]
     const cpu= options[Math.floor(Math.random() * options.length)]
     if (resultado === cpu ) {
-        console.log("empate")
+        drawPoints ++;
+        document.getElementById('drawScore').innerHTML = drawPoints;
     } else if (
         (resultado == "scissor" && cpu =="paper" || resultado == "paper" && cpu == "rock" || resultado == "rock" && cpu == "scissor")
     ) { 
-        playerPoints +=1;
-        console.log('You win!!');
+        playerPoints ++;
+        document.getElementById('playerScore').innerHTML = playerPoints;
     } else {
-        cpuPoints +=1;
-        console.log('Cpu win!!');
+        cpuPoints++;
+        document.getElementById('cpuScore').innerHTML = cpuPoints;
     }
-    if (cpuPoints==3) {
-        console.log('gano la cpu')
-    }else if (playerPoints == 3) {
-        console.log('gano EL JUGA')
-        
-    }
+    if (playerPoints=='3') {
+        alert("PLAYER WIN")
+        document.location.reload()
+        return;
+    }else if(cpuPoints=='3'){
+        alert("CPU WIN")
+        document.location.reload()
+        return;
+    }else if(drawPoints=='3'){
+        alert("draw")
+        document.location.reload()
+        return;
+}
 }
 
 
